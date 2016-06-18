@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: APIFiat
+        psr4_prefix: APIFiat
+        src_path: app
