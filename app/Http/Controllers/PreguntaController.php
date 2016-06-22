@@ -6,13 +6,9 @@ use Illuminate\Http\Request;
 
 use APIFiat\Http\Requests;
 use APIFiat\Http\Controllers\Controller;
-use APIFiat\Categorias;
 
-class CategoriasController extends Controller
+class PreguntaController extends Controller
 {
-    public function __construct(){
-        $this->middleware('cors');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,11 +16,7 @@ class CategoriasController extends Controller
      */
     public function index()
     {
-        
-        $categorias = Categorias::all();
-        $res = ['data' => $categorias];
-
-        return response()->json($res, 200);
+        //
     }
 
     /**
@@ -45,8 +37,7 @@ class CategoriasController extends Controller
      */
     public function store(Request $request)
     {
-        Categorias::create($request->all());
-        return response()->json(["mensaje"=>"Creada correctamente"]);
+        //
     }
 
     /**
@@ -57,8 +48,7 @@ class CategoriasController extends Controller
      */
     public function show($id)
     {
-        
-
+        //
     }
 
     /**
@@ -69,12 +59,7 @@ class CategoriasController extends Controller
      */
     public function edit($id)
     {
-        $categoria = Categorias::find($id);
-        if(is_null($categoria)){
-             App::abort(404);
-        };
-
-        return response()->json(["mensaje"=>"Se actualizo correctamente"]);
+        //
     }
 
     /**
@@ -86,12 +71,7 @@ class CategoriasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categoria = Categorias::find($id);
-        if(is_null($categoria)){
-             App::abort(404);
-        };
-
-        return response()->json(["mensaje"=>"Se actualizo correctamente"]);
+        //
     }
 
     /**
